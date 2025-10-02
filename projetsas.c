@@ -376,11 +376,13 @@ switch(choix){
         break;
     case 5:
         printf("\n--Mes statistiques--\n");
-        printf("1. Historique des achats\n");
-        historique_achats(historique, achats);
-
+        printf("1.Mes achats\n");
         printf("0. Retour au menu principal\n");
         scanf("%d", &choix_statistiques);
+        if (choix_statistiques == 1){
+           historique_achats(historique, achats);
+
+        }
         break;
     case 0:
         printf("\nAu revoir \n");
